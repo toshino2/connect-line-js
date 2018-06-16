@@ -18,8 +18,16 @@ function connectLine(className, i = 0) {
     var rad = Math.atan2(lineWidth, lineHeight);
     var degree = rad * (180 / Math.PI);
 
+
     //辺の長さ
     var lineZ = lineWidth / Math.sin(rad);
+
+    //直角で狂うのを回避
+    if (degree == 0 || degree == 180){
+        lineZ = lineHeight;
+    }else if (degree == 90 || degree == 270){
+        lineZ = lineWidth;
+    };
 
     $(className).css("position", "relative");
     $(className + ":first").append('<span class="connect-line-line connect-line-' + classNameId + '"></span>');
