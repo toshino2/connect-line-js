@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/jquery.js"></script>
     <script src="js/connect-line.js"></script>
+    <link rel="stylesheet" href="js/connect-line.css">
     <title>DEMO</title>
+
+    <script>
+        $(window).on("load resize", function () {
+            connectLine(".connect-line");
+            connectLine(".connect");
+        });
+    </script>
 </head>
 
 <body>
     <span>ダミーテキスト</span>
+    <span class="connect">ダミーテキスト</span>
+    <span class="connect-line">ダミーテキスト</span>
     <span>ダミーテキスト</span>
     <span>ダミーテキスト</span>
     <span>ダミーテキスト</span>
@@ -29,6 +39,7 @@
     <span>ダミーテキスト</span>
     <span>ダミーテキスト</span>
     <span>ダミーテキスト</span>
+    <span class="connect">ダミーテキスト</span>
     <span>ダミーテキスト</span>
     <span>ダミーテキスト</span>
     <span>ダミーテキスト</span>
@@ -78,10 +89,7 @@
     <span>ダミーテキスト</span>
     <span>ダミーテキスト</span>
     <span>ダミーテキスト</span>
-    <span>ダミーテキスト</span>
-    <span>ダミーテキスト</span>
-    <span>ダミーテキスト</span>
-    <span>ダミーテキスト</span>
+    <span class="connect-line">ダミーテキスト</span>
     <span>ダミーテキスト</span>
     <span>ダミーテキスト</span>
     <span>ダミーテキスト</span>
