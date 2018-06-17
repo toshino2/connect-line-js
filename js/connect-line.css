@@ -1,5 +1,6 @@
 .connect-line-point{
     position:relative;
+    display: inline-block;
 }
 .connect-line-point::before{
     content: "";
@@ -18,10 +19,23 @@
 .connect-line-line{
     display: block;
     transform-origin: top center;
-    width: 3px;
+    width: 2px;
     background: red;
     height: 50px;
     position: absolute;
     left: 50%;
     top: 50%; 
+}
+
+.connect-line-line::after{
+    content: "";
+    width: 2px;
+    height: 19px;
+    background: red;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: rotate(25deg);
 }
